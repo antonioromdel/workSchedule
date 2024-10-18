@@ -55,7 +55,7 @@ export default function CreateMonth ({diasDelMes, startDay, isToday, selectMonth
         startDay += 1;
     }
 
-    console.log(selectedShift)
+    
 
     return (
         <>
