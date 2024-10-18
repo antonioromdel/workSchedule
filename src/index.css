@@ -1,0 +1,210 @@
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --vacaciones: pink;
+  --descanso:red;
+  --mañana:rgb(2, 2, 197);
+  --tarde:rgb(88, 88, 253);
+}
+
+#root {
+  max-width: auto;
+  margin: 0 auto;
+  padding: .2rem;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  display: flex;    
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #fffff0;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+p{
+  margin: 0;
+}
+
+.month {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 0;
+}
+
+.day{
+  border: 1px solid rgb(190, 190, 190);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  
+}
+
+.daysofweek{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 2rem;
+}
+
+.dayweek{
+  border: 1px solid rgb(190, 190, 190);
+  font-weight: bold;
+  width: 70px;
+  height: 70px;
+}
+
+.today{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.istoday{
+  color: red;
+  font-weight: bold;
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: 2px solid red;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#meses, #year{
+    border: none;
+    padding:1rem;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.shift {
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+}
+
+.shift.Mmorning {
+  color: white;
+  background-color: var(--mañana); /* Color para turno de mañana */
+}
+
+.shift.Tafternoon {
+  color: white; /* Color para turno de tarde */
+  background-color: var(--tarde);
+}
+
+.shift.DdayOff {
+  color: white; /* Color para día libre */
+  background-color: var(--descanso);
+}
+
+.shift.Vacaciones{
+  color: white;
+  background-color: var(--vacaciones);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1000; 
+  box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+}
+
+.modalbtns{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btnModal{
+  width: auto;
+  height: 50px;
+  border: 1px solid red;
+  background-color: white;
+  border-radius: 50px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.close{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.close > svg{
+  width: 30px;
+  height: 30px;
+}
+
+.legend{
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.legend__info{
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+
+.info__color{
+  width: 20px;
+  height: 20px;
+}
+
+.mañana{
+  background-color: var(--mañana);
+}
+
+.tarde{
+  background-color: var(--tarde);
+}
+
+.descanso{
+  background-color: var(--descanso);
+}
+
+.vacaciones{
+  background-color: var(--vacaciones);
+}
