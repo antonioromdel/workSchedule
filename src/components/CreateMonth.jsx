@@ -14,7 +14,7 @@ export default function CreateMonth ({diasDelMes, startDay, isToday, selectMonth
                 return {
                     ...prev,
                     [selectYear]: {
-                        [selectMonth]: Array(diasDelMes).fill(null),
+                        [selectMonth]: Array(diasDelMes+1).fill(null),
                     },
                 };
             } else if (!prev[selectYear][selectMonth]) {
@@ -22,7 +22,7 @@ export default function CreateMonth ({diasDelMes, startDay, isToday, selectMonth
                     ...prev,
                     [selectYear]: {
                         ...prev[selectYear],
-                        [selectMonth]: Array(diasDelMes).fill(null),
+                        [selectMonth]: Array(diasDelMes+1).fill(null),
                     },
                 };
             }
@@ -54,6 +54,8 @@ export default function CreateMonth ({diasDelMes, startDay, isToday, selectMonth
         arrayDays[startDay] = i + 1;
         startDay += 1;
     }
+
+    console.log(selectedShift)
 
     return (
         <>
