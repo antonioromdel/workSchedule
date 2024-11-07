@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -208,3 +211,4 @@ p{
 .vacaciones{
   background-color: var(--vacaciones);
 }
+
